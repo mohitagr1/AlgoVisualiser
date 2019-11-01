@@ -1,0 +1,144 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to Glitch!</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+   <script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+  crossorigin="anonymous"></script>
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+  </head>
+
+    <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active" id="sorting-algo" onclick="onSelect('sorting-algo')">
+        <a class="nav-link" href="#sorting-page">Sorting Algorithm <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" id="pathf-algo" onclick="onSelect('pathf-algo')">
+        <a class="nav-link" href="#pathf-page">Pathfinding Algorithm</a>
+      </li>
+      <li class="nav-item" id="oth-algo" onclick="onSelect('oth-algo')">
+        <a class="nav-link" href="#">Other Algorithm</a>
+      </li>
+    </ul>
+    
+  </div>
+  </nav>
+
+<div id ="sorting-page" class="container">
+      <div class="head row">
+      
+        <label class="col-2" for="size_input">Enter Size</label>
+        <div class="slidecontainer col">
+          <input class="slider"  onchange = "generateGraph()" type="range" name="size" min="3" max="100" id="size_input">
+        </div>
+      
+      <button  class="col-2 btn btn-primary offset-1" id="sort">
+      SORT
+      </button> 
+      
+    
+      </div>
+      <div class="row" style="margin-top: 1em">
+        <select class="form-control" id="select_dropdown">
+          <option>Select Algorithm</option>
+          <option>Bubble Sort</option>
+          <option>Merge Sort</option>
+          <option>Selection Sort</option> 
+          <option>Quick Sort</option>        
+        </select>
+      </div>
+      <div class="row" style="margin-top: 1em">
+    
+      <button class="col btn btn-light"><i class="material-icons">
+      play_circle_outline
+      </i></button>
+      
+      <button class="col btn btn-light"><i class="material-icons">
+      pause_circle_outline
+      </i></button>
+      <button class="col btn btn-light"><i class="material-icons">
+      stop
+      </i></button>
+             
+      </div>
+
+      <div id="graph" class="row">
+      </div>
+</div>
+<div id ="pathf-page" class="container">
+      <div class="head row">
+      
+        <label class="col-2" for="size_input">Enter Size</label>
+        <div class="slidecontainer col">
+          <input class="slider" onclick ="generateGrid()" type="range" name="size" min="3" max="10" id="gridsize_input">
+        </div>
+      
+      <button  class="col-2 btn btn-primary offset-1" id="sort">
+      SORT
+      </button> 
+      
+    
+      </div>
+      <div class="row" style="margin-top: 1em">
+        <select class="form-control" id="select_dropdown">
+          <option>Select Algorithm</option>
+          <option>Djikstra Algorithm</option>
+          <option>A* Algorithm</option>
+        </select>
+      </div>
+      <div class="row" style="margin-top: 1em">
+    
+      <button id="toggle" class="col btn btn-light">
+        <i class="material-icons" id="create">
+          create
+        </i>
+        <i class="material-icons" id="erase"  style="display: none">
+          block
+        </i>
+    </button>
+      
+      <button id ="clear" class="col btn btn-light">
+      <i class="material-icons">
+        clear
+      </i></button>
+      <button class="col btn btn-light"><i class="material-icons">
+        stop
+      </i></button>
+             
+      </div>
+      <div id="pathf_graph" class="row">
+      <table class="col">
+
+      </table>
+      </div>
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

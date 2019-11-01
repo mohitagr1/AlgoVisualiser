@@ -1,0 +1,111 @@
+/* styles */
+/* called by your view template */
+
+.container {
+  margin-top: 2em;
+}
+#pathf_graph table {
+  height: 20em;
+  background: #d3d3d3;
+}
+.grid {
+  background: white;
+
+  border: solid;
+  position: relative;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+.container:target {
+  display: block;
+}
+.container {
+  display: none;
+}
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+.head {
+  display: flex;
+}
+.material-icons {
+  font-size: 1.5em;
+}
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: gray; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: gray; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+h4 {
+  align-items: flex-end;
+  margin-right: 12px;
+  margin-top: 0px;
+}
+.caret {
+  width: 0;
+  height: 0;
+  display: inline-block;
+  border: 10px solid transparent;
+}
+#graph {
+  display: flex;
+  
+  align-items: flex-end;
+  box-shadow: 0px 0px 10px 10px darkgrey;
+  padding-right: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  margin-top: inherit;
+}
+.bar {
+  transition: 0s;
+  position: relative;
+  background: blue;
+  height: 2em;
+  flex: auto;
+  left: 0px;
+  margin: 1px;
+}
