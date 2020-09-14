@@ -21,8 +21,12 @@
 .container:target {
   display: block;
 }
+
 .container {
   display: none;
+}
+#sorting-page{
+  display:block;
 }
 .dropdown-submenu .dropdown-menu {
   top: 0;

@@ -29,63 +29,35 @@
 
     <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">Algorithm Visualizer</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active" id="sorting-algo" onclick="onSelect('sorting-algo')">
-        <a class="nav-link" href="#sorting-page">Sorting Algorithm <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item" id="pathf-algo" onclick="onSelect('pathf-algo')">
-        <a class="nav-link" href="#pathf-page">Pathfinding Algorithm</a>
-      </li>
-      <li class="nav-item" id="oth-algo" onclick="onSelect('oth-algo')">
-        <a class="nav-link" href="#">Other Algorithm</a>
-      </li>
-    </ul>
-    
-  </div>
+  
   </nav>
 
 <div id ="sorting-page" class="container">
-      <div class="head row">
+      <div class="head row to-disable">
       
         <label class="col-2" for="size_input">Enter Size</label>
         <div class="slidecontainer col">
           <input class="slider"  onchange = "generateGraph()" type="range" name="size" min="3" max="100" id="size_input">
         </div>
       
-      <button  class="col-2 btn btn-primary offset-1" id="sort">
+      <button  class="col-2 btn  to-disable btn-primary offset-1" id="sort">
       SORT
       </button> 
       
     
       </div>
-      <div class="row" style="margin-top: 1em">
+      <div class="row to-disable"  style="margin-top: 1em">
         <select class="form-control" id="select_dropdown">
-          <option>Select Algorithm</option>
           <option>Bubble Sort</option>
           <option>Merge Sort</option>
           <option>Selection Sort</option> 
           <option>Quick Sort</option>        
         </select>
-      </div>
-      <div class="row" style="margin-top: 1em">
-    
-      <button class="col btn btn-light"><i class="material-icons">
-      play_circle_outline
-      </i></button>
-      
-      <button class="col btn btn-light"><i class="material-icons">
-      pause_circle_outline
-      </i></button>
-      <button class="col btn btn-light"><i class="material-icons">
-      stop
-      </i></button>
-             
       </div>
 
       <div id="graph" class="row">
